@@ -16,7 +16,7 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     
     LessonOne* one = new LessonOne();
-    one->createHelloWindow();
+    one->showLessonContent();
     
 //    glfwInit();
 //    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);

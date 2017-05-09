@@ -15,6 +15,7 @@
 		254E41A71EAF1BE8000FC56E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254E41A61EAF1BE8000FC56E /* CoreVideo.framework */; };
 		254E41A91EAF1C05000FC56E /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 254E41A81EAF1C05000FC56E /* libglfw3.a */; };
 		25F062941EC19FEB0034A767 /* LessonOne.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25F062921EC19FEB0034A767 /* LessonOne.cpp */; };
+		25F062A51EC1D2A90034A767 /* LessonTwo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25F062A31EC1D2A90034A767 /* LessonTwo.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,8 @@
 		254E41A81EAF1C05000FC56E /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = ../../../../usr/local/lib/libglfw3.a; sourceTree = "<group>"; };
 		25F062921EC19FEB0034A767 /* LessonOne.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LessonOne.cpp; sourceTree = "<group>"; };
 		25F062931EC19FEB0034A767 /* LessonOne.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LessonOne.hpp; sourceTree = "<group>"; };
+		25F062A31EC1D2A90034A767 /* LessonTwo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LessonTwo.cpp; sourceTree = "<group>"; };
+		25F062A41EC1D2A90034A767 /* LessonTwo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LessonTwo.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 			children = (
 				25F062921EC19FEB0034A767 /* LessonOne.cpp */,
 				25F062931EC19FEB0034A767 /* LessonOne.hpp */,
+				25F062A31EC1D2A90034A767 /* LessonTwo.cpp */,
+				25F062A41EC1D2A90034A767 /* LessonTwo.hpp */,
 			);
 			name = Lesson;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25F062A51EC1D2A90034A767 /* LessonTwo.cpp in Sources */,
 				25F062941EC19FEB0034A767 /* LessonOne.cpp in Sources */,
 				2506CFF31EBC7019005F94EA /* Lesson.cpp in Sources */,
 				254E41991EAF1B3C000FC56E /* main.cpp in Sources */,

@@ -1,13 +1,13 @@
 //
-//  LessonOne.hpp
+//  LessonTwo.hpp
 //  GLFW
 //
 //  Created by 高立征 on 2017/5/9.
 //  Copyright © 2017年 高立征. All rights reserved.
 //
 
-#ifndef LessonOne_hpp
-#define LessonOne_hpp
+#ifndef LessonTwo_hpp
+#define LessonTwo_hpp
 
 #include <stdio.h>
 #include <iostream>
@@ -15,11 +15,11 @@
 #include <GLFW/glfw3.h>
 using namespace std;
 
-class LessonOne
+class LessonTwo
 {
 public:
-    LessonOne(){};
-    ~LessonOne(){};
+    LessonTwo(){};
+    ~LessonTwo(){};
     void showLessonContent();
 };
-#endif /* LessonOne_hpp */
+#endif /* LessonTwo_hpp */
