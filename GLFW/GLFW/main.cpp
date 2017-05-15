@@ -10,18 +10,21 @@
 #define GLFW_INCLUDE_GLCOREARB
 #include <GLFW/glfw3.h>
 #include "LessonOne.hpp"
+#include "LessonTwo.hpp"
+#include "LessonThree.hpp"
 using namespace std;
 
 
 int main(int argc, const char * argv[]) {
     
-    LessonOne* one = new LessonOne();
-    one->showLessonContent();
+//    LessonOne* one = new LessonOne();
+//    one->showLessonContent();
+
+//    LessonTwo* two = new LessonTwo();
+//    two->showLessonContent();
     
-//    glfwInit();
-//    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-//    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-//    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-//    glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
+    LessonThree* three = new LessonThree();
+    three->showLessonContent();
+    
     return 0;
 }

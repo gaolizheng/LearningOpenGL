@@ -1,13 +1,13 @@
 //
-//  LessonTwo.hpp
+//  LessonThree.hpp
 //  GLFW
 //
-//  Created by 高立征 on 2017/5/9.
+//  Created by 高立征 on 2017/5/15.
 //  Copyright © 2017年 高立征. All rights reserved.
 //
 
-#ifndef LessonTwo_hpp
-#define LessonTwo_hpp
+#ifndef LessonThree_hpp
+#define LessonThree_hpp
 
 #include <stdio.h>
 #include <iostream>
@@ -16,11 +16,11 @@
 #include "LessonBase.hpp"
 using namespace std;
 
-class LessonTwo:public LessonBase
+class LessonThree:public LessonBase
 {
 public:
-    LessonTwo();
-    ~LessonTwo(){};
+    LessonThree();
+    ~LessonThree(){};
     void showLessonContent() override;
 };
-#endif /* LessonTwo_hpp */
+#endif /* LessonThree_hpp */

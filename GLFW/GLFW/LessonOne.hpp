@@ -13,13 +13,14 @@
 #include <iostream>
 #define GLFW_INCLUDE_GLCOREARB
 #include <GLFW/glfw3.h>
+#include "LessonBase.hpp"
 using namespace std;
 
-class LessonOne
+class LessonOne:public LessonBase
 {
 public:
     LessonOne(){};
     ~LessonOne(){};
-    void showLessonContent();
+    void showLessonContent() override;
 };
 #endif /* LessonOne_hpp */

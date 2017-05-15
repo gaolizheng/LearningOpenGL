@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2506CFF31EBC7019005F94EA /* Lesson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2506CFF11EBC7019005F94EA /* Lesson.cpp */; };
 		254E41991EAF1B3C000FC56E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254E41981EAF1B3C000FC56E /* main.cpp */; };
 		254E41A11EAF1BC8000FC56E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254E41A01EAF1BC8000FC56E /* IOKit.framework */; };
 		254E41A31EAF1BD4000FC56E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254E41A21EAF1BD4000FC56E /* Cocoa.framework */; };
 		254E41A51EAF1BDE000FC56E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254E41A41EAF1BDE000FC56E /* OpenGL.framework */; };
 		254E41A71EAF1BE8000FC56E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254E41A61EAF1BE8000FC56E /* CoreVideo.framework */; };
 		254E41A91EAF1C05000FC56E /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 254E41A81EAF1C05000FC56E /* libglfw3.a */; };
+		255DACF11EC98F4F00B19390 /* LessonThree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 255DACEF1EC98F4F00B19390 /* LessonThree.cpp */; };
+		255DACF41EC990B900B19390 /* LessonBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 255DACF21EC990B900B19390 /* LessonBase.cpp */; };
 		25F062941EC19FEB0034A767 /* LessonOne.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25F062921EC19FEB0034A767 /* LessonOne.cpp */; };
 		25F062A51EC1D2A90034A767 /* LessonTwo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25F062A31EC1D2A90034A767 /* LessonTwo.cpp */; };
 /* End PBXBuildFile section */
@@ -31,8 +32,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2506CFF11EBC7019005F94EA /* Lesson.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lesson.cpp; sourceTree = "<group>"; };
-		2506CFF21EBC7019005F94EA /* Lesson.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Lesson.hpp; sourceTree = "<group>"; };
 		254E41951EAF1B3C000FC56E /* GLFW */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GLFW; sourceTree = BUILT_PRODUCTS_DIR; };
 		254E41981EAF1B3C000FC56E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		254E41A01EAF1BC8000FC56E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -40,6 +39,10 @@
 		254E41A41EAF1BDE000FC56E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		254E41A61EAF1BE8000FC56E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		254E41A81EAF1C05000FC56E /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = ../../../../usr/local/lib/libglfw3.a; sourceTree = "<group>"; };
+		255DACEF1EC98F4F00B19390 /* LessonThree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LessonThree.cpp; sourceTree = "<group>"; };
+		255DACF01EC98F4F00B19390 /* LessonThree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LessonThree.hpp; sourceTree = "<group>"; };
+		255DACF21EC990B900B19390 /* LessonBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LessonBase.cpp; sourceTree = "<group>"; };
+		255DACF31EC990B900B19390 /* LessonBase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LessonBase.hpp; sourceTree = "<group>"; };
 		25F062921EC19FEB0034A767 /* LessonOne.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LessonOne.cpp; sourceTree = "<group>"; };
 		25F062931EC19FEB0034A767 /* LessonOne.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LessonOne.hpp; sourceTree = "<group>"; };
 		25F062A31EC1D2A90034A767 /* LessonTwo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LessonTwo.cpp; sourceTree = "<group>"; };
@@ -84,8 +87,6 @@
 			children = (
 				25F062911EC19FB50034A767 /* Lesson */,
 				254E41981EAF1B3C000FC56E /* main.cpp */,
-				2506CFF11EBC7019005F94EA /* Lesson.cpp */,
-				2506CFF21EBC7019005F94EA /* Lesson.hpp */,
 			);
 			path = GLFW;
 			sourceTree = "<group>";
@@ -109,6 +110,10 @@
 				25F062931EC19FEB0034A767 /* LessonOne.hpp */,
 				25F062A31EC1D2A90034A767 /* LessonTwo.cpp */,
 				25F062A41EC1D2A90034A767 /* LessonTwo.hpp */,
+				255DACEF1EC98F4F00B19390 /* LessonThree.cpp */,
+				255DACF01EC98F4F00B19390 /* LessonThree.hpp */,
+				255DACF21EC990B900B19390 /* LessonBase.cpp */,
+				255DACF31EC990B900B19390 /* LessonBase.hpp */,
 			);
 			name = Lesson;
 			sourceTree = "<group>";
@@ -170,10 +175,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				255DACF11EC98F4F00B19390 /* LessonThree.cpp in Sources */,
 				25F062A51EC1D2A90034A767 /* LessonTwo.cpp in Sources */,
 				25F062941EC19FEB0034A767 /* LessonOne.cpp in Sources */,
-				2506CFF31EBC7019005F94EA /* Lesson.cpp in Sources */,
 				254E41991EAF1B3C000FC56E /* main.cpp in Sources */,
+				255DACF41EC990B900B19390 /* LessonBase.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
