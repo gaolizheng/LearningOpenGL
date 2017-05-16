@@ -9,12 +9,7 @@
 #ifndef LessonTwo_hpp
 #define LessonTwo_hpp
 
-#include <stdio.h>
-#include <iostream>
-#define GLFW_INCLUDE_GLCOREARB
-#include <GLFW/glfw3.h>
 #include "LessonBase.hpp"
-using namespace std;
 
 class LessonTwo:public LessonBase
 {

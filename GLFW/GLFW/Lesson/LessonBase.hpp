@@ -9,8 +9,9 @@
 #ifndef LessonBase_hpp
 #define LessonBase_hpp
 
-#include <stdio.h>
-#include <GLFW/glfw3.h>
+#include "DefineHeader.h"
+#include "ShaderManager.hpp"
+#include "WindowManager.hpp"
 
 class LessonBase
 {
@@ -18,11 +19,6 @@ public:
     LessonBase(){};
     ~LessonBase(){};
     virtual void showLessonContent(){};
-public:
-    GLuint WIDTH;
-    GLuint HEIGHT;
-    GLchar* vertexShaderSource;
-    GLchar* fragmentShaderSource;
 };
 
 
