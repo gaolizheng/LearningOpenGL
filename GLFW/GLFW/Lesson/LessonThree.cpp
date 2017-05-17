@@ -9,14 +9,8 @@
 #include "LessonThree.hpp"
 #include <math.h>
 
-LessonThree::LessonThree()
+void LessonThree::initDrawData()
 {
-}
-
-
-void LessonThree::showLessonContent()
-{
-    
     ShaderManager::getInstance()->initShader("Lesson3.vsh", "Lesson3.fsh");
     
     GLfloat vertices[] = {
@@ -31,7 +25,6 @@ void LessonThree::showLessonContent()
         1,2,3
     };
     
-    GLuint VBO,VAO,EBO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
     glGenBuffers(1, &EBO);
@@ -48,31 +41,16 @@ void LessonThree::showLessonContent()
     glEnableVertexAttribArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
-    
-    while(!glfwWindowShouldClose(WindowManager::getInstance()->getWindow())){
-        glfwPollEvents();
-        
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
-        
-        
-        
-        GLfloat timeValue = glfwGetTime();
-        GLfloat greenValue = (sin(timeValue)/2)+0.5;
-        GLint vertexColorLocation = glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "ourColor");
-        ShaderManager::getInstance()->useProgram();
-        glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
-        glBindVertexArray(VAO);
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-        glBindVertexArray(0);
-        
-        glfwSwapBuffers(WindowManager::getInstance()->getWindow());
-        
-    }
-    
-    glDeleteVertexArrays(1, &VAO);
-    glDeleteBuffers(1, &VBO);
-    glDeleteBuffers(1, &EBO);
-    glfwTerminate();
-    
 }
+void LessonThree::gameLoop()
+{
+    GLfloat timeValue = glfwGetTime();
+    GLfloat greenValue = (sin(timeValue)/2)+0.5;
+    GLint vertexColorLocation = glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "ourColor");
+    ShaderManager::getInstance()->useProgram();
+    glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
+    glBindVertexArray(VAO);
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+    glBindVertexArray(0);
+}
+

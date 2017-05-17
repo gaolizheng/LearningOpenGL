@@ -14,8 +14,9 @@
 class LessonTwo:public LessonBase
 {
 public:
-    LessonTwo();
+    LessonTwo(){};
     ~LessonTwo(){};
-    void showLessonContent() override;
+    void initDrawData() override;
+    void gameLoop() override;
 };
 #endif /* LessonTwo_hpp */

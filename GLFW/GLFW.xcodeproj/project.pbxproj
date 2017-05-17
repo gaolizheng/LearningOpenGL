@@ -14,6 +14,9 @@
 		251F4CE51ECA881C002CAD11 /* LessonTwo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 251F4CDF1ECA881C002CAD11 /* LessonTwo.cpp */; };
 		251F4CE91ECA88E5002CAD11 /* ShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 251F4CE71ECA88E5002CAD11 /* ShaderManager.cpp */; };
 		251F4CF61ECA9CB2002CAD11 /* WindowManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 251F4CF41ECA9CB2002CAD11 /* WindowManager.cpp */; };
+		251F4CFC1ECB0372002CAD11 /* LessonFive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 251F4CFA1ECB0372002CAD11 /* LessonFive.cpp */; };
+		251F4D1D1ECB0D79002CAD11 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = 251F4D1B1ECB0D79002CAD11 /* SOIL.c */; };
+		251F4D1F1ECB0EDC002CAD11 /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 251F4D181ECB0C3F002CAD11 /* libSOIL.a */; };
 		254E41991EAF1B3C000FC56E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254E41981EAF1B3C000FC56E /* main.cpp */; };
 		254E41A11EAF1BC8000FC56E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254E41A01EAF1BC8000FC56E /* IOKit.framework */; };
 		254E41A31EAF1BD4000FC56E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254E41A21EAF1BD4000FC56E /* Cocoa.framework */; };
@@ -56,6 +59,14 @@
 		251F4CF11ECA937B002CAD11 /* Lesson2.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lesson2.fsh; sourceTree = "<group>"; };
 		251F4CF41ECA9CB2002CAD11 /* WindowManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WindowManager.cpp; sourceTree = "<group>"; };
 		251F4CF51ECA9CB2002CAD11 /* WindowManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = WindowManager.hpp; sourceTree = "<group>"; };
+		251F4CFA1ECB0372002CAD11 /* LessonFive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LessonFive.cpp; sourceTree = "<group>"; };
+		251F4CFB1ECB0372002CAD11 /* LessonFive.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LessonFive.hpp; sourceTree = "<group>"; };
+		251F4CFE1ECB038B002CAD11 /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
+		251F4D151ECB040E002CAD11 /* Lesson5.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lesson5.vsh; sourceTree = "<group>"; };
+		251F4D161ECB041A002CAD11 /* Lesson5.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lesson5.fsh; sourceTree = "<group>"; };
+		251F4D181ECB0C3F002CAD11 /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSOIL.a; sourceTree = "<group>"; };
+		251F4D1B1ECB0D79002CAD11 /* SOIL.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SOIL.c; sourceTree = "<group>"; };
+		251F4D1C1ECB0D79002CAD11 /* SOIL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOIL.h; sourceTree = "<group>"; };
 		254E41951EAF1B3C000FC56E /* GLFW */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GLFW; sourceTree = BUILT_PRODUCTS_DIR; };
 		254E41981EAF1B3C000FC56E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		254E41A01EAF1BC8000FC56E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -70,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				251F4D1F1ECB0EDC002CAD11 /* libSOIL.a in Frameworks */,
 				254E41A91EAF1C05000FC56E /* libglfw3.a in Frameworks */,
 				254E41A71EAF1BE8000FC56E /* CoreVideo.framework in Frameworks */,
 				254E41A51EAF1BDE000FC56E /* OpenGL.framework in Frameworks */,
@@ -94,6 +106,8 @@
 				251F4CDE1ECA881C002CAD11 /* LessonThree.hpp */,
 				251F4CDF1ECA881C002CAD11 /* LessonTwo.cpp */,
 				251F4CE01ECA881C002CAD11 /* LessonTwo.hpp */,
+				251F4CFA1ECB0372002CAD11 /* LessonFive.cpp */,
+				251F4CFB1ECB0372002CAD11 /* LessonFive.hpp */,
 			);
 			path = Lesson;
 			sourceTree = "<group>";
@@ -120,8 +134,35 @@
 				251F4CEF1ECA92C3002CAD11 /* Lesson3.fsh */,
 				251F4CF01ECA936D002CAD11 /* Lesson2.vsh */,
 				251F4CF11ECA937B002CAD11 /* Lesson2.fsh */,
+				251F4D151ECB040E002CAD11 /* Lesson5.vsh */,
+				251F4D161ECB041A002CAD11 /* Lesson5.fsh */,
 			);
 			path = Shaders;
+			sourceTree = "<group>";
+		};
+		251F4CFD1ECB038B002CAD11 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				251F4CFE1ECB038B002CAD11 /* container.jpg */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		251F4D171ECB0C3F002CAD11 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				251F4D181ECB0C3F002CAD11 /* libSOIL.a */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		251F4D1A1ECB0D79002CAD11 /* SOIL */ = {
+			isa = PBXGroup;
+			children = (
+				251F4D1B1ECB0D79002CAD11 /* SOIL.c */,
+				251F4D1C1ECB0D79002CAD11 /* SOIL.h */,
+			);
+			path = SOIL;
 			sourceTree = "<group>";
 		};
 		254E418C1EAF1B3C000FC56E = {
@@ -144,6 +185,9 @@
 		254E41971EAF1B3C000FC56E /* GLFW */ = {
 			isa = PBXGroup;
 			children = (
+				251F4D1A1ECB0D79002CAD11 /* SOIL */,
+				251F4D171ECB0C3F002CAD11 /* libs */,
+				251F4CFD1ECB038B002CAD11 /* Resource */,
 				251F4CEA1ECA8E18002CAD11 /* Shaders */,
 				251F4CE61ECA8824002CAD11 /* Tools */,
 				251F4CD61ECA881C002CAD11 /* Lesson */,
@@ -221,11 +265,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				251F4D1D1ECB0D79002CAD11 /* SOIL.c in Sources */,
 				251F4CE51ECA881C002CAD11 /* LessonTwo.cpp in Sources */,
 				251F4CE31ECA881C002CAD11 /* LessonOne.cpp in Sources */,
 				251F4CE41ECA881C002CAD11 /* LessonThree.cpp in Sources */,
 				251F4CE21ECA881C002CAD11 /* LessonFour.cpp in Sources */,
 				251F4CE11ECA881C002CAD11 /* LessonBase.cpp in Sources */,
+				251F4CFC1ECB0372002CAD11 /* LessonFive.cpp in Sources */,
 				251F4CF61ECA9CB2002CAD11 /* WindowManager.cpp in Sources */,
 				251F4CE91ECA88E5002CAD11 /* ShaderManager.cpp in Sources */,
 				254E41991EAF1B3C000FC56E /* main.cpp in Sources */,
@@ -326,7 +372,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = /usr/local/include/;
-				LIBRARY_SEARCH_PATHS = /usr/local/lib/;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(PROJECT_DIR)/GLFW/libs",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -335,7 +384,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = /usr/local/include/;
-				LIBRARY_SEARCH_PATHS = /usr/local/lib/;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(PROJECT_DIR)/GLFW/libs",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

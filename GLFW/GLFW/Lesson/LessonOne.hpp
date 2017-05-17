@@ -16,6 +16,5 @@ class LessonOne:public LessonBase
 public:
     LessonOne(){};
     ~LessonOne(){};
-    void showLessonContent() override;
 };
 #endif /* LessonOne_hpp */

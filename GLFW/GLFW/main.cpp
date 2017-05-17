@@ -15,6 +15,7 @@
 #include "LessonTwo.hpp"
 #include "LessonThree.hpp"
 #include "LessonFour.hpp"
+#include "LessonFive.hpp"
 
 extern GLFWwindow* window;
 
@@ -37,12 +38,18 @@ void key_callback(GLFWwindow* window,int key,int scancode,int action,int mode)
 
 int main(int argc, const char * argv[]) {
     
+    //初始化配置
     initGLFW();
+    //创建window
     WindowManager::getInstance()->initWindow();
     //添加按键监听
     glfwSetKeyCallback(WindowManager::getInstance()->getWindow(),key_callback);
+    
     LessonBase* lesson;
-    int lessonNum = 3;
+    
+    //课程
+    int lessonNum = 4;
+    
     switch (lessonNum) {
         case 1:
             lesson = new LessonOne();
@@ -56,10 +63,25 @@ int main(int argc, const char * argv[]) {
         case 4:
             lesson = new LessonFour();
             break;
+        case 5:
+            lesson = new LessonFive();
+            break;
     }
-    
-    lesson->showLessonContent();
-    
+    lesson->initDrawData();
+    while (!glfwWindowShouldClose(WindowManager::getInstance()->getWindow())) {
+        glfwPollEvents();
+        
+        //窗口背景颜色
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+        
+        //绘制
+        lesson->gameLoop();
+        
+        glfwSwapBuffers(WindowManager::getInstance()->getWindow());
+    }
+    //清理数据
+    lesson->clearData();
     
     return 0;
 }

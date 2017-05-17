@@ -8,12 +8,7 @@
 
 #include "LessonFour.hpp"
 
-LessonFour::LessonFour()
-{
-    
-}
-
-void LessonFour::showLessonContent()
+void LessonFour::initDrawData()
 {
     ShaderManager::getInstance()->initShader("Lesson4.vsh", "Lesson4.fsh");
     
@@ -23,8 +18,6 @@ void LessonFour::showLessonContent()
         -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,  // Bottom Left
         0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f   // Top
     };
-    
-    GLuint VBO,VAO;
     
     glGenVertexArrays(1,&VAO);
     glGenBuffers(1, &VBO);
@@ -42,24 +35,12 @@ void LessonFour::showLessonContent()
     
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
-    
-    while (!glfwWindowShouldClose(WindowManager::getInstance()->getWindow())) {
-        glfwPollEvents();
-        
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
-        
-        ShaderManager::getInstance()->useProgram();
-        glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
-        glBindVertexArray(0);
-        
-        glfwSwapBuffers(WindowManager::getInstance()->getWindow());
-        
-    }
-    glDeleteBuffers(1, &VAO);
-    glDeleteBuffers(1, &VBO);
-    glfwTerminate();
-    
-    
+
+}
+void LessonFour::gameLoop()
+{
+    ShaderManager::getInstance()->useProgram();
+    glBindVertexArray(VAO);
+    glDrawArrays(GL_TRIANGLES, 0, 3);
+    glBindVertexArray(0);
 }

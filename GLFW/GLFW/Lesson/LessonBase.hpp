@@ -19,6 +19,14 @@ public:
     LessonBase(){};
     ~LessonBase(){};
     virtual void showLessonContent(){};
+    virtual void initDrawData(){};
+    virtual void gameLoop(){};
+    virtual void clearData();
+public:
+    GLuint VAO;                 //VAO
+    GLuint VBO;                 //VBO
+    GLuint EBO;                 //EBO
+    GLuint texture;             //纹理
 };
 
 

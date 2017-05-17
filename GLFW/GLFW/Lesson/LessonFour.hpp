@@ -14,9 +14,10 @@
 class LessonFour : public LessonBase
 {
 public:
-    LessonFour();
+    LessonFour(){};
     ~LessonFour(){};
-    void showLessonContent() override;
+    void initDrawData() override;
+    void gameLoop() override;
 };
 
 #endif /* LessonFour_hpp */
