@@ -23,6 +23,7 @@
 		254E41A51EAF1BDE000FC56E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254E41A41EAF1BDE000FC56E /* OpenGL.framework */; };
 		254E41A71EAF1BE8000FC56E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254E41A61EAF1BE8000FC56E /* CoreVideo.framework */; };
 		254E41A91EAF1C05000FC56E /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 254E41A81EAF1C05000FC56E /* libglfw3.a */; };
+		256855901ECBDF5300025738 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2568558F1ECBDF5300025738 /* libglfw3.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -74,6 +75,9 @@
 		254E41A41EAF1BDE000FC56E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		254E41A61EAF1BE8000FC56E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		254E41A81EAF1C05000FC56E /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = ../../../../usr/local/lib/libglfw3.a; sourceTree = "<group>"; };
+		2568558D1ECBDF4400025738 /* glfw3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glfw3.h; sourceTree = "<group>"; };
+		2568558E1ECBDF4400025738 /* glfw3native.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glfw3native.h; sourceTree = "<group>"; };
+		2568558F1ECBDF5300025738 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libglfw3.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				251F4D1F1ECB0EDC002CAD11 /* libSOIL.a in Frameworks */,
+				256855901ECBDF5300025738 /* libglfw3.a in Frameworks */,
 				254E41A91EAF1C05000FC56E /* libglfw3.a in Frameworks */,
 				254E41A71EAF1BE8000FC56E /* CoreVideo.framework in Frameworks */,
 				254E41A51EAF1BDE000FC56E /* OpenGL.framework in Frameworks */,
@@ -151,6 +156,7 @@
 		251F4D171ECB0C3F002CAD11 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				2568558F1ECBDF5300025738 /* libglfw3.a */,
 				251F4D181ECB0C3F002CAD11 /* libSOIL.a */,
 			);
 			path = libs;
@@ -185,6 +191,7 @@
 		254E41971EAF1B3C000FC56E /* GLFW */ = {
 			isa = PBXGroup;
 			children = (
+				2568558C1ECBDF4400025738 /* GLFW */,
 				251F4D1A1ECB0D79002CAD11 /* SOIL */,
 				251F4D171ECB0C3F002CAD11 /* libs */,
 				251F4CFD1ECB038B002CAD11 /* Resource */,
@@ -206,6 +213,15 @@
 				254E41A01EAF1BC8000FC56E /* IOKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2568558C1ECBDF4400025738 /* GLFW */ = {
+			isa = PBXGroup;
+			children = (
+				2568558D1ECBDF4400025738 /* glfw3.h */,
+				2568558E1ECBDF4400025738 /* glfw3native.h */,
+			);
+			path = GLFW;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,11 +387,8 @@
 		254E419D1EAF1B3C000FC56E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = /usr/local/include/;
-				LIBRARY_SEARCH_PATHS = (
-					/usr/local/lib/,
-					"$(PROJECT_DIR)/GLFW/libs",
-				);
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/GLFW/libs";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -383,11 +396,8 @@
 		254E419E1EAF1B3C000FC56E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = /usr/local/include/;
-				LIBRARY_SEARCH_PATHS = (
-					/usr/local/lib/,
-					"$(PROJECT_DIR)/GLFW/libs",
-				);
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/GLFW/libs";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

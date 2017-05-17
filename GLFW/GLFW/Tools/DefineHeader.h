@@ -11,7 +11,7 @@
 
 #include <iostream>
 #define GLFW_INCLUDE_GLCOREARB
-#include <GLFW/glfw3.h>
+#include "glfw3.h"
 #include "SOIL.h"
 using namespace std;
 

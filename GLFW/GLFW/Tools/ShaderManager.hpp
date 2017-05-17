@@ -14,7 +14,7 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
-#include <GLFW/glfw3.h>
+#include "glfw3.h"
 
 class ShaderManager
 {
