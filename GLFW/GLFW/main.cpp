@@ -16,8 +16,19 @@
 #include "LessonThree.hpp"
 #include "LessonFour.hpp"
 #include "LessonFive.hpp"
+#include "LessonSix.hpp"
+#include <mach-o/dyld.h>
 
 extern GLFWwindow* window;
+
+void getPath()
+{
+    char path[512];
+    unsigned size = 512;
+    _NSGetExecutablePath(path, &size);
+    path[size] = '\0';
+    printf("The path is: %s\n", path);
+}
 
 void initGLFW()
 {
@@ -38,6 +49,7 @@ void key_callback(GLFWwindow* window,int key,int scancode,int action,int mode)
 
 int main(int argc, const char * argv[]) {
     
+//    getPath();
     //初始化配置
     initGLFW();
     //创建window
@@ -48,7 +60,7 @@ int main(int argc, const char * argv[]) {
     LessonBase* lesson;
     
     //课程
-    int lessonNum = 4;
+    int lessonNum = 6;
     
     switch (lessonNum) {
         case 1:
@@ -65,6 +77,9 @@ int main(int argc, const char * argv[]) {
             break;
         case 5:
             lesson = new LessonFive();
+            break;
+        case 6:
+            lesson = new LessonSix();
             break;
     }
     lesson->initDrawData();

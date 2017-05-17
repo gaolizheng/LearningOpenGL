@@ -41,6 +41,13 @@ void LessonThree::initDrawData()
     glEnableVertexAttribArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
+    /**
+     EBO的解绑需要在VAO解绑之后，原因：
+     VAO是一个object,它保存了一次OpenGL绘制的全部信息，在绑定VAO和解绑VAO之间的一些操作会相应修改
+     VAO的状态，比如在解绑VAO之前解绑了EBO就改变了VAO中顶点索引数组，造成绘制的时候出现问题，为什么解绑VBO
+     没有问题呢，因为顶点信息是在glVertexAttribPointer时影响到VAO的，所以解绑VBO并不会直接影响VAO
+     */
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 }
 void LessonThree::gameLoop()
 {
