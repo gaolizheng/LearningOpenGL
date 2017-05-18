@@ -17,9 +17,21 @@
 #include "LessonFour.hpp"
 #include "LessonFive.hpp"
 #include "LessonSix.hpp"
+#include "LessonSeven.hpp"
+#include "LessonEight.hpp"
+#include "LessonNine.hpp"
 #include <mach-o/dyld.h>
 
 extern GLFWwindow* window;
+
+void test()
+{
+    glm::vec4 vec(1.0f,0.0f,0.0f,1.0f);
+    glm::mat4 trans;
+    trans = glm::translate(trans, glm::vec3(1.0f,1.0f,0.0f));
+    vec = trans*vec;
+    std::cout<<vec.x<<","<<vec.y<<","<<vec.z<<std::endl;
+}
 
 void getPath()
 {
@@ -50,6 +62,7 @@ void key_callback(GLFWwindow* window,int key,int scancode,int action,int mode)
 int main(int argc, const char * argv[]) {
     
 //    getPath();
+//    test();
     //初始化配置
     initGLFW();
     //创建window
@@ -60,7 +73,7 @@ int main(int argc, const char * argv[]) {
     LessonBase* lesson;
     
     //课程
-    int lessonNum = 6;
+    int lessonNum = 9;
     
     switch (lessonNum) {
         case 1:
@@ -81,6 +94,15 @@ int main(int argc, const char * argv[]) {
         case 6:
             lesson = new LessonSix();
             break;
+        case 7:
+            lesson = new LessonSeven();
+            break;
+        case 8:
+            lesson = new LessonEight();
+            break;
+        case 9:
+            lesson = new LessonNine();
+            break;
     }
     lesson->initDrawData();
     while (!glfwWindowShouldClose(WindowManager::getInstance()->getWindow())) {
@@ -88,7 +110,8 @@ int main(int argc, const char * argv[]) {
         
         //窗口背景颜色
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+//        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
         //绘制
         lesson->gameLoop();
