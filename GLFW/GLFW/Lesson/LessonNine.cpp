@@ -8,6 +8,19 @@
 
 #include "LessonNine.hpp"
 
+glm::vec3 cubePositions[] = {
+    glm::vec3( 0.0f,  0.0f,  0.0f),
+    glm::vec3( 2.0f,  5.0f, -15.0f),
+    glm::vec3(-1.5f, -2.2f, -2.5f),
+    glm::vec3(-3.8f, -2.0f, -12.3f),
+    glm::vec3( 2.4f, -0.4f, -3.5f),
+    glm::vec3(-1.7f,  3.0f, -7.5f),
+    glm::vec3( 1.3f, -2.0f, -2.5f),
+    glm::vec3( 1.5f,  2.0f, -2.5f),
+    glm::vec3( 1.5f,  0.2f, -1.5f),
+    glm::vec3(-1.3f,  1.0f, -1.5f)
+};
+
 void LessonNine::initDrawData()
 {
     glEnable(GL_DEPTH_TEST);
@@ -136,7 +149,6 @@ void LessonNine::initDrawData()
     glGenerateMipmap(GL_TEXTURE_2D);
     SOIL_free_image_data(image);
     glBindTexture(GL_TEXTURE_2D, 0);
-    
 }
 
 
@@ -152,25 +164,30 @@ void LessonNine::gameLoop()
     glBindTexture(GL_TEXTURE_2D, texture1);
     glUniform1i(glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "ourTexture1"), 1);
     
-    glm::mat4 model;
-    glm::mat4 view;
-    glm::mat4 projection;
-    
-    model = glm::rotate(model, (GLfloat)glfwGetTime()*glm::radians(10.0f), glm::vec3(0.5,1.0,0));
-    view = glm::translate(view, glm::vec3(0,0,-3));
-    projection = glm::perspective(glm::radians(45.0f), 800.0f/600.0f, 0.1f, 100.0f);
-    
-    GLuint modelLoc = glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "model");
-    GLuint viewLoc = glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "view");
-    GLuint proLoc = glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "projection");
-    
-    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-    glUniformMatrix4fv(proLoc, 1, GL_FALSE, glm::value_ptr(projection));
-    
     glBindVertexArray(VAO);
-//    glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
-    glDrawArrays(GL_TRIANGLES, 0, 36);
+    
+    for (GLint i =0; i<10; i++) {
+        glm::mat4 model;
+        glm::mat4 view;
+        glm::mat4 projection;
+        
+        model = glm::translate(model, cubePositions[i]);
+        model = glm::rotate(model, (GLfloat)glfwGetTime()*glm::radians(10.0f), glm::vec3(0.5,1.0,0));
+        view = glm::translate(view, glm::vec3(0,0,-3));
+        projection = glm::perspective(glm::radians(45.0f), 800.0f/600.0f, 0.1f, 100.0f);
+        
+        GLuint modelLoc = glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "model");
+        GLuint viewLoc = glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "view");
+        GLuint proLoc = glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "projection");
+        
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+        glUniformMatrix4fv(proLoc, 1, GL_FALSE, glm::value_ptr(projection));
+        
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+
+    }
+    
     glBindVertexArray(0);
     
 }
