@@ -19,15 +19,13 @@
 class ShaderManager
 {
 private:
-    ShaderManager();
 public:
+    ShaderManager(const GLchar* vertexShaderPath,const GLchar* fragmentShaderPath);
     ~ShaderManager();
-    static ShaderManager* getInstance();
     void initShader(const GLchar* vertexShaderPath,const GLchar* fragmentShaderPath);
     void useProgram();
     GLuint getShaderProgram();
 private:
-    static ShaderManager* _instance;
     static const GLchar* rootPath;
     GLuint _shaderProgram;                  //program
     GLuint vertex;                          //顶点着色器

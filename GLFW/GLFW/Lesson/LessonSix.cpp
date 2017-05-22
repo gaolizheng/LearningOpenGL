@@ -10,8 +10,7 @@
 
 void LessonSix::initDrawData()
 {
-    ShaderManager::getInstance()->initShader("Lesson6.vsh", "Lesson6.fsh");
-    
+    shader = new ShaderManager("Lesson6.vsh", "Lesson6.fsh");
     GLfloat vertices[] = {
         -0.5f,0.5f,0.0f, 0.0f,1.0f,     //左上角
         0.5f,0.5f,0.0f,  1.0f,1.0f,     //右上角
@@ -75,13 +74,13 @@ void LessonSix::initDrawData()
 void LessonSix::gameLoop()
 {
     
-    ShaderManager::getInstance()->useProgram();
+    shader->useProgram();
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, texture0);
-    glUniform1i(glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "ourTexture1"), 0);
+    glUniform1i(glGetUniformLocation(shader->getShaderProgram(), "ourTexture1"), 0);
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, texture1);
-    glUniform1i(glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "ourTexture2"), 1);
+    glUniform1i(glGetUniformLocation(shader->getShaderProgram(), "ourTexture2"), 1);
     glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);

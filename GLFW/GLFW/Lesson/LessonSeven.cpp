@@ -10,7 +10,7 @@
 
 void LessonSeven::initDrawData()
 {
-    ShaderManager::getInstance()->initShader("Lesson7.vsh", "Lesson7.fsh");
+    shader = new ShaderManager("Lesson7.vsh", "Lesson7.fsh");
     GLfloat vertices[] = {
         -0.5f,0.5f,0.0f, 0.0f,1.0f, //left top
         0.5f,0.5f,0.0f,  1.0f,1.0f, //right top
@@ -69,19 +69,19 @@ void LessonSeven::initDrawData()
 
 void LessonSeven::gameLoop()
 {
-    ShaderManager::getInstance()->useProgram();
+    shader->useProgram();
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, texture0);
-    glUniform1i(glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "ourTexture0"), 0);
+    glUniform1i(glGetUniformLocation(shader->getShaderProgram(), "ourTexture0"), 0);
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, texture1);
-    glUniform1i(glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "ourTexture1"), 1);
+    glUniform1i(glGetUniformLocation(shader->getShaderProgram(), "ourTexture1"), 1);
     
     glm::mat4 transform;
     transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
     transform = glm::rotate(transform, (GLfloat)glfwGetTime() * glm::radians(20.0f), glm::vec3(0.0f, 0.0f, 1.0f));
 //    transform = glm::rotate(transform, 90.0f, glm::vec3(0.0f, 0.0f, 1.0f));
-    GLint transformLoc = glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "transform");
+    GLint transformLoc = glGetUniformLocation(shader->getShaderProgram(), "transform");
     glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
     
     glBindVertexArray(VAO);

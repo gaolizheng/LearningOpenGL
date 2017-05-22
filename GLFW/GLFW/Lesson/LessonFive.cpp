@@ -10,8 +10,7 @@
 
 void LessonFive::initDrawData()
 {
-    ShaderManager::getInstance()->initShader("Lesson5.vsh", "Lesson5.fsh");
-    
+    shader = new ShaderManager("Lesson5.vsh", "Lesson5.fsh");
     GLfloat vertices[] = {
         0.5f,0.5f,0.0f, 1.0f,0.0f,0.0f, 1.0f,1.0f, //top right
         0.5f,-0.5f,0.0f, 0.0f,1.0f,0.0f, 1.0f,0.0f, //bottom right
@@ -72,7 +71,7 @@ void LessonFive::initDrawData()
 void LessonFive::gameLoop()
 {
     glBindTexture(GL_TEXTURE_2D, texture);
-    ShaderManager::getInstance()->useProgram();
+    shader->useProgram();
     glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);

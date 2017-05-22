@@ -11,8 +11,7 @@
 
 void LessonTwo::initDrawData()
 {
-    ShaderManager::getInstance()->initShader("Lesson2.vsh", "Lesson2.fsh");
-    
+    shader = new ShaderManager("Lesson2.vsh", "Lesson2.fsh");
     //顶点数组
     GLfloat vertices[] = {
         -0.5f,-0.5f,0.0f,
@@ -41,7 +40,7 @@ void LessonTwo::initDrawData()
 void LessonTwo::gameLoop()
 {
     //绘制三角形
-    ShaderManager::getInstance()->useProgram();
+    shader->useProgram();
     glBindVertexArray(VAO);
     glDrawArrays(GL_TRIANGLES, 0, 3);
     glBindVertexArray(0);

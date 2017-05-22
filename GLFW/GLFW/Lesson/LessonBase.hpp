@@ -12,6 +12,7 @@
 #include "DefineHeader.h"
 #include "ShaderManager.hpp"
 #include "WindowManager.hpp"
+#include "CameraManager.hpp"
 
 class LessonBase
 {
@@ -24,9 +25,13 @@ public:
     virtual void clearData();
 public:
     GLuint VAO;                 //VAO
+    GLuint lightVAO;            //光环vao
     GLuint VBO;                 //VBO
     GLuint EBO;                 //EBO
     GLuint texture;             //纹理
+    ShaderManager* shader;       //物体shader
+    ShaderManager* lightShader;  //光源shader
+    CameraManager* camera;       //摄像机
 };
 
 

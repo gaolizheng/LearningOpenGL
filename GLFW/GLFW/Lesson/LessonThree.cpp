@@ -11,8 +11,7 @@
 
 void LessonThree::initDrawData()
 {
-    ShaderManager::getInstance()->initShader("Lesson3.vsh", "Lesson3.fsh");
-    
+    shader = new ShaderManager("Lesson3.vsh", "Lesson3.fsh");
     GLfloat vertices[] = {
         0.0f,0.5f,0.0f,//top
         -0.5f,0.0f,0.0f,//left
@@ -53,8 +52,8 @@ void LessonThree::gameLoop()
 {
     GLfloat timeValue = glfwGetTime();
     GLfloat greenValue = (sin(timeValue)/2)+0.5;
-    GLint vertexColorLocation = glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "ourColor");
-    ShaderManager::getInstance()->useProgram();
+    GLint vertexColorLocation = glGetUniformLocation(shader->getShaderProgram(), "ourColor");
+    shader->useProgram();
     glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
     glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);

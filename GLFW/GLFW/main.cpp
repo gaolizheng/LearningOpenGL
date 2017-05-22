@@ -20,9 +20,21 @@
 #include "LessonSeven.hpp"
 #include "LessonEight.hpp"
 #include "LessonNine.hpp"
+#include "LessonTen.hpp"
+#include "Lesson11.hpp"
+#include "Lesson12.hpp"
 #include <mach-o/dyld.h>
 
-extern GLFWwindow* window;
+glm::vec3 cameraPos   = glm::vec3(0.0f, 0.0f,  3.0f);
+glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
+glm::vec3 cameraUp    = glm::vec3(0.0f, 1.0f,  0.0f);
+bool keys[1024];
+GLfloat deltaTime = 0.0f;	// Time between current frame and last frame
+GLfloat lastFrame = 0.0f;  	// Time of last frame
+GLfloat lastX = 400, lastY = 300;
+GLfloat yaw    = -90.0f;	// Yaw is initialized to -90.0 degrees since a yaw of 0.0 results in a direction vector pointing to the right (due to how Eular angles work) so we initially rotate a bit to the left.
+GLfloat pitch  =  0.0f;
+bool firstMouse = true;
 
 void test()
 {
@@ -54,9 +66,59 @@ void initGLFW()
 
 void key_callback(GLFWwindow* window,int key,int scancode,int action,int mode)
 {
-    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
         glfwSetWindowShouldClose(window, GL_TRUE);
+    
+    if(action == GLFW_PRESS)
+        keys[key] = true;
+    else if(action == GLFW_RELEASE)
+        keys[key] = false;
+}
+
+void mouse_callback(GLFWwindow* window, double xpos, double ypos)
+{
+    if(firstMouse) // this bool variable is initially set to true
+    {
+        lastX = xpos;
+        lastY = ypos;
+        firstMouse = false;
+        return;
     }
+    GLfloat xoffset = xpos - lastX;
+    GLfloat yoffset = lastY - ypos; // Reversed since y-coordinates range from bottom to top
+    lastX = xpos;
+    lastY = ypos;
+    
+    GLfloat sensitivity = 0.05f;
+    xoffset *= sensitivity;
+    yoffset *= sensitivity;
+    
+    yaw   += xoffset;
+    pitch += yoffset;
+    
+    if(pitch > 89.0f)
+        pitch =  89.0f;
+    if(pitch < -89.0f)
+        pitch = -89.0f;
+    
+    glm::vec3 front;
+    front.x = cos(glm::radians(pitch)) * cos(glm::radians(yaw));
+    front.y = sin(glm::radians(pitch));
+    front.z = cos(glm::radians(pitch)) * sin(glm::radians(yaw));
+    cameraFront = glm::normalize(front);
+}
+
+void do_movement()
+{
+    GLfloat cameraSpeed = 5.0f * deltaTime;
+    if(keys[GLFW_KEY_W])
+        cameraPos += cameraSpeed * cameraFront;
+    if(keys[GLFW_KEY_S])
+        cameraPos -= cameraSpeed * cameraFront;
+    if(keys[GLFW_KEY_A])
+        cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+    if(keys[GLFW_KEY_D])
+        cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
 }
 
 int main(int argc, const char * argv[]) {
@@ -67,13 +129,14 @@ int main(int argc, const char * argv[]) {
     initGLFW();
     //创建window
     WindowManager::getInstance()->initWindow();
+    glfwSetInputMode(WindowManager::getInstance()->getWindow(), GLFW_CURSOR, GLFW_CURSOR_DISABLED);
     //添加按键监听
     glfwSetKeyCallback(WindowManager::getInstance()->getWindow(),key_callback);
-    
+    glfwSetCursorPosCallback(WindowManager::getInstance()->getWindow(), mouse_callback);
     LessonBase* lesson;
     
     //课程
-    int lessonNum = 9;
+    int lessonNum = 12;
     
     switch (lessonNum) {
         case 1:
@@ -103,11 +166,23 @@ int main(int argc, const char * argv[]) {
         case 9:
             lesson = new LessonNine();
             break;
+        case 10:
+            lesson = new LessonTen();
+            break;
+        case 11:
+            lesson = new Lesson11();
+            break;
+        case 12:
+            lesson = new Lesson12();
+            break;
     }
     lesson->initDrawData();
     while (!glfwWindowShouldClose(WindowManager::getInstance()->getWindow())) {
         glfwPollEvents();
-        
+        GLfloat currentFrame = glfwGetTime();
+        deltaTime = currentFrame - lastFrame;
+        lastFrame = currentFrame;
+        do_movement();
         //窗口背景颜色
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 //        glClear(GL_COLOR_BUFFER_BIT);

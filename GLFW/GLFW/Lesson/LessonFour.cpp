@@ -10,8 +10,7 @@
 
 void LessonFour::initDrawData()
 {
-    ShaderManager::getInstance()->initShader("Lesson4.vsh", "Lesson4.fsh");
-    
+    shader = new ShaderManager("Lesson4.vsh", "Lesson4.fsh");
     GLfloat vertices[] = {
         // Positions         // Colors
         0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,  // Bottom Right
@@ -39,7 +38,7 @@ void LessonFour::initDrawData()
 }
 void LessonFour::gameLoop()
 {
-    ShaderManager::getInstance()->useProgram();
+    shader->useProgram();
     glBindVertexArray(VAO);
     glDrawArrays(GL_TRIANGLES, 0, 3);
     glBindVertexArray(0);

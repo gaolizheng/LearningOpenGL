@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2509A0511ECDD9EB00BE3FAD /* LessonTen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2509A04F1ECDD9EB00BE3FAD /* LessonTen.cpp */; };
 		251F4CE11ECA881C002CAD11 /* LessonBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 251F4CD71ECA881C002CAD11 /* LessonBase.cpp */; };
 		251F4CE21ECA881C002CAD11 /* LessonFour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 251F4CD91ECA881C002CAD11 /* LessonFour.cpp */; };
 		251F4CE31ECA881C002CAD11 /* LessonOne.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 251F4CDB1ECA881C002CAD11 /* LessonOne.cpp */; };
@@ -17,6 +18,7 @@
 		251F4CFC1ECB0372002CAD11 /* LessonFive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 251F4CFA1ECB0372002CAD11 /* LessonFive.cpp */; };
 		251F4D1D1ECB0D79002CAD11 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = 251F4D1B1ECB0D79002CAD11 /* SOIL.c */; };
 		251F4D1F1ECB0EDC002CAD11 /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 251F4D181ECB0C3F002CAD11 /* libSOIL.a */; };
+		254110CA1ECEEB4300F82ACE /* Lesson11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254110C81ECEEB4300F82ACE /* Lesson11.cpp */; };
 		254E41991EAF1B3C000FC56E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254E41981EAF1B3C000FC56E /* main.cpp */; };
 		254E41A11EAF1BC8000FC56E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254E41A01EAF1BC8000FC56E /* IOKit.framework */; };
 		254E41A31EAF1BD4000FC56E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254E41A21EAF1BD4000FC56E /* Cocoa.framework */; };
@@ -27,6 +29,8 @@
 		256855911ECBDFE200025738 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2568558F1ECBDF5300025738 /* libglfw3.a */; };
 		256855941ECBEE5B00025738 /* LessonSix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 256855921ECBEE5B00025738 /* LessonSix.cpp */; };
 		256856B01ECC512500025738 /* LessonSeven.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 256856AE1ECC512500025738 /* LessonSeven.cpp */; };
+		258470621ED2D750007CCC60 /* Lesson12.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 258470601ED2D750007CCC60 /* Lesson12.cpp */; };
+		258470651ED2DCD7007CCC60 /* CameraManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 258470631ED2DCD7007CCC60 /* CameraManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +46,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2509A04F1ECDD9EB00BE3FAD /* LessonTen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LessonTen.cpp; sourceTree = "<group>"; };
+		2509A0501ECDD9EB00BE3FAD /* LessonTen.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LessonTen.hpp; sourceTree = "<group>"; };
 		251F4CD71ECA881C002CAD11 /* LessonBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LessonBase.cpp; sourceTree = "<group>"; };
 		251F4CD81ECA881C002CAD11 /* LessonBase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LessonBase.hpp; sourceTree = "<group>"; };
 		251F4CD91ECA881C002CAD11 /* LessonFour.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LessonFour.cpp; sourceTree = "<group>"; };
@@ -71,6 +77,12 @@
 		251F4D181ECB0C3F002CAD11 /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSOIL.a; sourceTree = "<group>"; };
 		251F4D1B1ECB0D79002CAD11 /* SOIL.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SOIL.c; sourceTree = "<group>"; };
 		251F4D1C1ECB0D79002CAD11 /* SOIL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOIL.h; sourceTree = "<group>"; };
+		254110B91ECE81EA00F82ACE /* Lesson10.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lesson10.vsh; sourceTree = "<group>"; };
+		254110BA1ECE81F400F82ACE /* Lesson10.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lesson10.fsh; sourceTree = "<group>"; };
+		254110C81ECEEB4300F82ACE /* Lesson11.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lesson11.cpp; sourceTree = "<group>"; };
+		254110C91ECEEB4300F82ACE /* Lesson11.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Lesson11.hpp; sourceTree = "<group>"; };
+		254110CB1ECEED8B00F82ACE /* Lesson11.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lesson11.vsh; sourceTree = "<group>"; };
+		254110CC1ECEED9600F82ACE /* Lesson11.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lesson11.fsh; sourceTree = "<group>"; };
 		254E41951EAF1B3C000FC56E /* GLFW */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GLFW; sourceTree = BUILT_PRODUCTS_DIR; };
 		254E41981EAF1B3C000FC56E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		254E41A01EAF1BC8000FC56E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -85,6 +97,8 @@
 		255C17BB1ECD8C5700DCA64E /* LessonNine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LessonNine.hpp; sourceTree = "<group>"; };
 		255C17BD1ECD8D0500DCA64E /* Lesson9.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lesson9.vsh; sourceTree = "<group>"; };
 		255C17BE1ECD8D1100DCA64E /* Lesson9.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lesson9.fsh; sourceTree = "<group>"; };
+		2564DB4D1ED28C7A00E91372 /* erkang.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = erkang.jpg; sourceTree = "<group>"; };
+		2564DB4E1ED28D2700E91372 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 		2568558D1ECBDF4400025738 /* glfw3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glfw3.h; sourceTree = "<group>"; };
 		2568558E1ECBDF4400025738 /* glfw3native.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glfw3native.h; sourceTree = "<group>"; };
 		2568558F1ECBDF5300025738 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libglfw3.a; sourceTree = "<group>"; };
@@ -288,6 +302,14 @@
 		256856AF1ECC512500025738 /* LessonSeven.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LessonSeven.hpp; sourceTree = "<group>"; };
 		256856B11ECC535200025738 /* Lesson7.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lesson7.vsh; sourceTree = "<group>"; };
 		256856B21ECC535F00025738 /* Lesson7.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lesson7.fsh; sourceTree = "<group>"; };
+		2584705C1ED2D4BC007CCC60 /* Lesson12.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lesson12.vsh; sourceTree = "<group>"; };
+		2584705D1ED2D4CB007CCC60 /* Lesson12.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lesson12.fsh; sourceTree = "<group>"; };
+		2584705E1ED2D63C007CCC60 /* Lesson12light.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lesson12light.vsh; sourceTree = "<group>"; };
+		2584705F1ED2D648007CCC60 /* Lesson12light.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lesson12light.fsh; sourceTree = "<group>"; };
+		258470601ED2D750007CCC60 /* Lesson12.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lesson12.cpp; sourceTree = "<group>"; };
+		258470611ED2D750007CCC60 /* Lesson12.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Lesson12.hpp; sourceTree = "<group>"; };
+		258470631ED2DCD7007CCC60 /* CameraManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CameraManager.cpp; sourceTree = "<group>"; };
+		258470641ED2DCD7007CCC60 /* CameraManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CameraManager.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +352,12 @@
 				255C17971ECD6D2200DCA64E /* LessonEight.hpp */,
 				255C17BA1ECD8C5700DCA64E /* LessonNine.cpp */,
 				255C17BB1ECD8C5700DCA64E /* LessonNine.hpp */,
+				2509A04F1ECDD9EB00BE3FAD /* LessonTen.cpp */,
+				2509A0501ECDD9EB00BE3FAD /* LessonTen.hpp */,
+				254110C81ECEEB4300F82ACE /* Lesson11.cpp */,
+				254110C91ECEEB4300F82ACE /* Lesson11.hpp */,
+				258470601ED2D750007CCC60 /* Lesson12.cpp */,
+				258470611ED2D750007CCC60 /* Lesson12.hpp */,
 			);
 			path = Lesson;
 			sourceTree = "<group>";
@@ -342,6 +370,8 @@
 				251F4CED1ECA9208002CAD11 /* DefineHeader.h */,
 				251F4CF41ECA9CB2002CAD11 /* WindowManager.cpp */,
 				251F4CF51ECA9CB2002CAD11 /* WindowManager.hpp */,
+				258470631ED2DCD7007CCC60 /* CameraManager.cpp */,
+				258470641ED2DCD7007CCC60 /* CameraManager.hpp */,
 			);
 			name = Tools;
 			path = GLFW/Tools;
@@ -366,6 +396,14 @@
 				255C17A11ECD6F2B00DCA64E /* Lesson8.fsh */,
 				255C17BD1ECD8D0500DCA64E /* Lesson9.vsh */,
 				255C17BE1ECD8D1100DCA64E /* Lesson9.fsh */,
+				254110B91ECE81EA00F82ACE /* Lesson10.vsh */,
+				254110BA1ECE81F400F82ACE /* Lesson10.fsh */,
+				254110CB1ECEED8B00F82ACE /* Lesson11.vsh */,
+				254110CC1ECEED9600F82ACE /* Lesson11.fsh */,
+				2584705C1ED2D4BC007CCC60 /* Lesson12.vsh */,
+				2584705D1ED2D4CB007CCC60 /* Lesson12.fsh */,
+				2584705E1ED2D63C007CCC60 /* Lesson12light.vsh */,
+				2584705F1ED2D648007CCC60 /* Lesson12light.fsh */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -374,6 +412,8 @@
 			isa = PBXGroup;
 			children = (
 				256855971ECBFE0C00025738 /* icon.jpg */,
+				2564DB4E1ED28D2700E91372 /* test.jpg */,
+				2564DB4D1ED28C7A00E91372 /* erkang.jpg */,
 				251F4CFE1ECB038B002CAD11 /* container.jpg */,
 			);
 			path = Resource;
@@ -729,8 +769,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2509A0511ECDD9EB00BE3FAD /* LessonTen.cpp in Sources */,
 				251F4D1D1ECB0D79002CAD11 /* SOIL.c in Sources */,
 				256856B01ECC512500025738 /* LessonSeven.cpp in Sources */,
+				254110CA1ECEEB4300F82ACE /* Lesson11.cpp in Sources */,
+				258470651ED2DCD7007CCC60 /* CameraManager.cpp in Sources */,
 				256855941ECBEE5B00025738 /* LessonSix.cpp in Sources */,
 				251F4CE51ECA881C002CAD11 /* LessonTwo.cpp in Sources */,
 				251F4CE31ECA881C002CAD11 /* LessonOne.cpp in Sources */,
@@ -740,6 +783,7 @@
 				251F4CFC1ECB0372002CAD11 /* LessonFive.cpp in Sources */,
 				251F4CF61ECA9CB2002CAD11 /* WindowManager.cpp in Sources */,
 				251F4CE91ECA88E5002CAD11 /* ShaderManager.cpp in Sources */,
+				258470621ED2D750007CCC60 /* Lesson12.cpp in Sources */,
 				255C17BC1ECD8C5700DCA64E /* LessonNine.cpp in Sources */,
 				255C17981ECD6D2200DCA64E /* LessonEight.cpp in Sources */,
 				254E41991EAF1B3C000FC56E /* main.cpp in Sources */,

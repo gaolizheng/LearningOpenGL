@@ -1,26 +1,26 @@
 //
-//  LessonNine.hpp
+//  LessonTen.hpp
 //  GLFW
 //
 //  Created by 高立征 on 2017/5/18.
 //  Copyright © 2017年 高立征. All rights reserved.
 //
 
-#ifndef LessonNine_hpp
-#define LessonNine_hpp
+#ifndef LessonTen_hpp
+#define LessonTen_hpp
 
 #include "LessonBase.hpp"
 
-class LessonNine : public LessonBase
+class LessonTen : public LessonBase
 {
 public:
-    LessonNine(){};
-    ~LessonNine(){};
+    LessonTen();
+    ~LessonTen(){};
     void initDrawData() override;
     void gameLoop() override;
     GLuint texture0;
     GLuint texture1;
-    glm::vec3* cubePositions;
+    glm::vec3 cubePositions[10];
 };
 
-#endif /* LessonNine_hpp */
+#endif /* LessonTen_hpp */

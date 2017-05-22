@@ -10,8 +10,7 @@
 
 void LessonEight::initDrawData()
 {
-    ShaderManager::getInstance()->initShader("Lesson8.vsh", "Lesson8.fsh");
-    
+    shader = new ShaderManager("Lesson8.vsh", "Lesson8.fsh");
     GLfloat vertices[] = {
         -0.5,0.5,0,0,1,//left top
         0.5,0.5,0,1,1,//right top
@@ -76,13 +75,13 @@ void LessonEight::initDrawData()
 
 void LessonEight::gameLoop()
 {
-    ShaderManager::getInstance()->useProgram();
+    shader->useProgram();
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, texture0);
-    glUniform1i(glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "ourTexture0"), 0);
+    glUniform1i(glGetUniformLocation(shader->getShaderProgram(), "ourTexture0"), 0);
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, texture1);
-    glUniform1i(glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "ourTexture1"), 1);
+    glUniform1i(glGetUniformLocation(shader->getShaderProgram(), "ourTexture1"), 1);
     
     glm::mat4 model;
     glm::mat4 view;
@@ -90,9 +89,9 @@ void LessonEight::gameLoop()
     model = glm::rotate(model,glm::radians(-55.0f) ,glm::vec3(1.0f,0.0f,0.0f) );
     view = glm::translate(view, glm::vec3(0.0f,0.0f,-3.0f));
     projection = glm::perspective(45.0f, 800.0f/600.0f, 0.1f, 100.0f);
-    GLint modeLocation = glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "model");
-    GLint viewLocation = glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "view");
-    GLint proLocation = glGetUniformLocation(ShaderManager::getInstance()->getShaderProgram(), "projection");
+    GLint modeLocation = glGetUniformLocation(shader->getShaderProgram(), "model");
+    GLint viewLocation = glGetUniformLocation(shader->getShaderProgram(), "view");
+    GLint proLocation = glGetUniformLocation(shader->getShaderProgram(), "projection");
     
     
     glUniformMatrix4fv(modeLocation, 1, GL_FALSE, glm::value_ptr(model));

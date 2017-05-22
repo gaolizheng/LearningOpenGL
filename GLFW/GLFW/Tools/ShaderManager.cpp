@@ -8,24 +8,14 @@
 
 #include "ShaderManager.hpp"
 
-ShaderManager* ShaderManager::_instance = nullptr;
-
-ShaderManager::ShaderManager()
+ShaderManager::ShaderManager(const GLchar* vertexShaderPath,const GLchar* fragmentShaderPath)
 {
-
+    initShader(vertexShaderPath, fragmentShaderPath);
 }
 
 ShaderManager::~ShaderManager()
 {
 
-}
-
-ShaderManager* ShaderManager::getInstance()
-{
-    if (_instance == nullptr) {
-        _instance = new ShaderManager();
-    }
-    return _instance;
 }
 
 void ShaderManager::initShader(const GLchar *vertexShaderPath, const GLchar *fragmentShaderPath)
