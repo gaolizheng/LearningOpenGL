@@ -23,6 +23,12 @@
 #include "LessonTen.hpp"
 #include "Lesson11.hpp"
 #include "Lesson12.hpp"
+#include "Lesson13.hpp"
+#include "Lesson14.hpp"
+#include "Lesson15.hpp"
+#include "Lesson16.hpp"
+#include "Lesson17.hpp"
+#include "Lesson18.hpp"
 #include <mach-o/dyld.h>
 
 glm::vec3 cameraPos   = glm::vec3(0.0f, 0.0f,  3.0f);
@@ -32,9 +38,11 @@ bool keys[1024];
 GLfloat deltaTime = 0.0f;	// Time between current frame and last frame
 GLfloat lastFrame = 0.0f;  	// Time of last frame
 GLfloat lastX = 400, lastY = 300;
-GLfloat yaw    = -90.0f;	// Yaw is initialized to -90.0 degrees since a yaw of 0.0 results in a direction vector pointing to the right (due to how Eular angles work) so we initially rotate a bit to the left.
+// Yaw is initialized to -90.0 degrees since a yaw of 0.0 results in a direction vector pointing to the right (due to how Eular angles work) so we initially rotate a bit to the left.
+GLfloat yaw    = -90.0f;
 GLfloat pitch  =  0.0f;
 bool firstMouse = true;
+glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
 
 void test()
 {
@@ -136,7 +144,7 @@ int main(int argc, const char * argv[]) {
     LessonBase* lesson;
     
     //课程
-    int lessonNum = 12;
+    int lessonNum = 18;
     
     switch (lessonNum) {
         case 1:
@@ -172,8 +180,26 @@ int main(int argc, const char * argv[]) {
         case 11:
             lesson = new Lesson11();
             break;
-        case 12:
+        case 12://基本光照
             lesson = new Lesson12();
+            break;
+        case 13://不同材质光照课程
+            lesson = new Lesson13();
+            break;
+        case 14://平行光课程
+            lesson = new Lesson14();
+            break;
+        case 15://点光源课程
+            lesson = new Lesson15();
+            break;
+        case 16://聚光灯课程
+            lesson = new Lesson16();
+            break;
+        case 17://各种光源融合课程
+            lesson = new Lesson17();
+            break;
+        case 18://加载模型课程
+            lesson = new Lesson18();
             break;
     }
     lesson->initDrawData();

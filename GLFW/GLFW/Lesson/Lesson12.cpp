@@ -8,7 +8,7 @@
 
 #include "Lesson12.hpp"
 
-glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
+extern glm::vec3 lightPos;
 
 void Lesson12::initDrawData()
 {
