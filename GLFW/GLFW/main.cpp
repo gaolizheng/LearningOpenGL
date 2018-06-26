@@ -144,7 +144,7 @@ int main(int argc, const char * argv[]) {
     LessonBase* lesson;
     
     //课程
-    int lessonNum = 18;
+    int lessonNum = 11;
     
     switch (lessonNum) {
         case 1:

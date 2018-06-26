@@ -12,7 +12,8 @@ void Lesson18::initDrawData()
 {
     glEnable(GL_DEPTH_TEST);
     shader = new ShaderManager("Lesson18.vsh","Lesson18.fsh");
-    ourModel = new Model("/Users/gaolizheng/GitHub/LearningOpenGL/GLFW/GLFW/Resource/model/nanosuit.obj");
+    string path = MY_PATH+"LearningOpenGL/GLFW/GLFW/Resource/model/nanosuit.obj";
+    ourModel = new Model((GLchar*)path.c_str());
     camera = new CameraManager();
 }
 

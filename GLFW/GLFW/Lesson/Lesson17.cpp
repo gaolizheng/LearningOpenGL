@@ -110,7 +110,8 @@ void Lesson17::initDrawData()
     int width, height;
     unsigned char* image;
     // Diffuse map
-    image = SOIL_load_image("/Users/gaolizheng/GitHub/LearningOpenGL/GLFW/GLFW/Resource/container2.png", &width, &height, 0, SOIL_LOAD_RGB);
+    string path = MY_PATH+"LearningOpenGL/GLFW/GLFW/Resource/container2.png";
+    image = SOIL_load_image(path.c_str(), &width, &height, 0, SOIL_LOAD_RGB);
     glBindTexture(GL_TEXTURE_2D, diffuseMap);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
     glGenerateMipmap(GL_TEXTURE_2D);
@@ -122,7 +123,8 @@ void Lesson17::initDrawData()
     glBindTexture(GL_TEXTURE_2D, 0);
     
     glGenTextures(1, &specularMap);
-    image = SOIL_load_image("/Users/gaolizheng/GitHub/LearningOpenGL/GLFW/GLFW/Resource/container2_specular.png", &width, &height, 0, SOIL_LOAD_RGB);
+    path = MY_PATH+"LearningOpenGL/GLFW/GLFW/Resource/container2_specular.png";
+    image = SOIL_load_image(path.c_str(), &width, &height, 0, SOIL_LOAD_RGB);
     glBindTexture(GL_TEXTURE_2D, specularMap);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
     glGenerateMipmap(GL_TEXTURE_2D);

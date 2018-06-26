@@ -39,7 +39,7 @@
 		2585B2C01ED482360064616A /* Lesson15.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2585B2BE1ED482360064616A /* Lesson15.cpp */; };
 		25B3CDA41ED6C4F500542C71 /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25B3CDA21ED6C4F500542C71 /* Model.cpp */; };
 		25B3CDDA1ED6E88F00542C71 /* Lesson18.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25B3CDD81ED6E88F00542C71 /* Lesson18.cpp */; };
-		25B3CDDD1ED6EC5F00542C71 /* libassimp.3.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B3CDA01ED6B48A00542C71 /* libassimp.3.3.1.dylib */; };
+		25DD891D20E1D04000679804 /* libassimp.3.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B3CDA01ED6B48A00542C71 /* libassimp.3.3.1.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -405,7 +405,6 @@
 		25B3CDD71ED6E86100542C71 /* Lesson18.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lesson18.fsh; sourceTree = "<group>"; };
 		25B3CDD81ED6E88F00542C71 /* Lesson18.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lesson18.cpp; sourceTree = "<group>"; };
 		25B3CDD91ED6E88F00542C71 /* Lesson18.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Lesson18.hpp; sourceTree = "<group>"; };
-		25B3CDDB1ED6EBE700542C71 /* libassimp.3.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.3.3.1.dylib; path = "../../../Downloads/assimp-3.3.1/build/code/Debug/libassimp.3.3.1.dylib"; sourceTree = "<group>"; };
 		25DA7F841ED7BB3300471844 /* arm_dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_dif.png; sourceTree = "<group>"; };
 		25DA7F851ED7BB3300471844 /* arm_showroom_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_showroom_ddn.png; sourceTree = "<group>"; };
 		25DA7F861ED7BB3300471844 /* arm_showroom_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_showroom_spec.png; sourceTree = "<group>"; };
@@ -434,7 +433,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25B3CDDD1ED6EC5F00542C71 /* libassimp.3.3.1.dylib in Frameworks */,
+				25DD891D20E1D04000679804 /* libassimp.3.3.1.dylib in Frameworks */,
 				256855911ECBDFE200025738 /* libglfw3.a in Frameworks */,
 				251F4D1F1ECB0EDC002CAD11 /* libSOIL.a in Frameworks */,
 				254E41A71EAF1BE8000FC56E /* CoreVideo.framework in Frameworks */,
@@ -633,7 +632,6 @@
 		254E419F1EAF1BC8000FC56E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				25B3CDDB1ED6EBE700542C71 /* libassimp.3.3.1.dylib */,
 				25B3CDA01ED6B48A00542C71 /* libassimp.3.3.1.dylib */,
 				254E41A61EAF1BE8000FC56E /* CoreVideo.framework */,
 				254E41A41EAF1BDE000FC56E /* OpenGL.framework */,

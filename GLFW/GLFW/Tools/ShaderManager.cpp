@@ -20,7 +20,8 @@ ShaderManager::~ShaderManager()
 
 void ShaderManager::initShader(const GLchar *vertexShaderPath, const GLchar *fragmentShaderPath)
 {
-    GLchar* basePath = "/Users/gaolizheng/GitHub/LearningOpenGL/GLFW/GLFW/Shaders/";
+    std::string path = MY_PATH+"LearningOpenGL/GLFW/GLFW/Shaders/";
+    GLchar* basePath = (GLchar*)path.c_str();
     memset(vPath, 0, sizeof(vPath));
     memset(fPath, 0, sizeof(fPath));
     strcat(vPath, basePath);

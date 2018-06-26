@@ -16,6 +16,8 @@
 #include <iostream>
 #include "glfw3.h"
 
+const std::string MY_PATH="/Users/gaolizheng/Work/";
+
 class ShaderManager
 {
 private:
